@@ -1,6 +1,6 @@
 const addBtn = document.querySelector("#addBtn");
 const noteGrid = document.querySelector("#noteGrid");
-var newTask = document.querySelector("#newTask");
+const newTask = document.querySelector("#newTask");
 const addTask = document.querySelector("addTask");
 const modifBtn = document.querySelector("#modifBtn");
 const deleteBtn = document.querySelector("#deleteBtn");
