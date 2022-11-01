@@ -5,8 +5,10 @@ const addTask = document.querySelector("addTask");
 const modifBtn = document.querySelector("#modifBtn");
 const deleteBtn = document.querySelector("#deleteBtn");
 
+// je charge le contenu du localstorage dans la grid
+noteGrid.innerHTML = localStorage.getItem("noteGrid")
+
 // Je créer un evenement sur le click du addBtn qui ajoute une nouvelle carte(nouvelle note) avec tous les éléments créer initialement 
-// 
 
 addBtn.addEventListener('click', function (e) {
     // faire apparaitre une nouvelle card 
@@ -14,6 +16,8 @@ addBtn.addEventListener('click', function (e) {
     const newCard = document.createElement("div");
     newCard.className = "noteCard";
     noteGrid.appendChild(newCard);
+    
+    
     
     // faire apparaitre le paragraphe
 
@@ -38,6 +42,7 @@ addBtn.addEventListener('click', function (e) {
     newButtons.appendChild(modifBtn);
     const newContent = document.createTextNode("K")
     modifBtn.appendChild(newContent)
+    
 
     //const imgModif = document.createElement("img");
     //imgModif.src = "./assets/bouton-modifier.png";
@@ -92,6 +97,7 @@ addBtn.addEventListener('click', function (e) {
         newCard.remove()
     });
 
+    localStorage.setItem("noteGrid", noteGrid.innerHTML)
 
 });
 
@@ -114,7 +120,7 @@ switchTheme.onclick= () => {
 
 
 // a terminer 
-localStorage.setItem("tasks",newTask.value); // Je sauvegarde ma liste sur le cache du navigateur
-newTask.value=localStorage.getItem("tasks");//  Je récupére ma liste sauvegardée
+//localStorage.setItem("tasks",newTask.value); // Je sauvegarde ma liste sur le cache du navigateur
+//newTask.value=localStorage.getItem("tasks");//  Je récupére ma liste sauvegardée
 // a terminer
 // Voir pour tenter de créer des copie de  ma div noteCard et modifier l'intérieur
