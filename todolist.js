@@ -6,19 +6,19 @@ const modifBtn = document.querySelector("#modifBtn");
 const deleteBtn = document.querySelector("#deleteBtn");
 
 // je charge le contenu du localstorage dans la grid
-noteGrid.innerHTML = localStorage.getItem("noteGrid")
+//noteGrid.innerHTML = localStorage.getItem("noteGrid")
 
 // Je créer un evenement sur le click du addBtn qui ajoute une nouvelle carte(nouvelle note) avec tous les éléments créer initialement 
 
-addBtn.addEventListener('click', function (e) {
+addBtn.addEventListener('click', function(e) {
     // faire apparaitre une nouvelle card 
     e.preventDefault()
     const newCard = document.createElement("div");
     newCard.className = "noteCard";
     noteGrid.appendChild(newCard);
-    
-    
-    
+
+
+
     // faire apparaitre le paragraphe
 
     const newText = document.createElement("div");
@@ -42,7 +42,7 @@ addBtn.addEventListener('click', function (e) {
     newButtons.appendChild(modifBtn);
     const newContent = document.createTextNode("K")
     modifBtn.appendChild(newContent)
-    
+
 
     //const imgModif = document.createElement("img");
     //imgModif.src = "./assets/bouton-modifier.png";
@@ -97,7 +97,7 @@ addBtn.addEventListener('click', function (e) {
         newCard.remove()
     });
 
-    localStorage.setItem("noteGrid", noteGrid.innerHTML)
+    //localStorage.setItem("noteGrid", noteGrid.innerHTML)
 
 });
 
@@ -106,14 +106,13 @@ const switchTheme = document.querySelector("#theme")
 const pageBody = document.querySelector("body")
 const themeName = document.querySelector(".theme-name")
 
-switchTheme.onclick= () => {
+switchTheme.onclick = () => {
     if (pageBody.classList.contains("dark")) {
         pageBody.classList.remove("dark")
-        themeName.textContent="dark"
-    }
-    else{
+        themeName.textContent = "dark"
+    } else {
         pageBody.classList.add("dark")
-        themeName.textContent="cloud"
+        themeName.textContent = "cloud"
     }
 
 }

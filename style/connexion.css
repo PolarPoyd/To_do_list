@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.container {
+    width: 500px;
+    border-radius: 10px;
+    padding: 55px, 55px, 37px;
+    background-color: rgb(22, 133, 230);
+}
+
+.login-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    font-size: 30px;
+    font-family: "cloud";
+}
+
+
+/* inputs */
+
+.user {
+    margin-top: 10%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.user-input {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    outline: 0;
+    font-size: 1.4rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+}
+
+.user-input:active {
+    border-bottom: 2px solid rgb(232, 0, 0);
+}
+
+.user-input:hover {
+    border-bottom: 2px solid rgb(232, 0, 0);
+}
+
+.password {
+    margin-top: 10%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.password-input {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    outline: 0;
+    font-size: 1.4rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+}
+
+.password-input:active {
+    border-bottom: 2px solid rgb(232, 0, 0);
+}
+
+.password-input:hover {
+    border-bottom: 2px solid rgb(232, 0, 0);
+}
+
+
+/* checkbox */
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.checkbox-label {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*button*/
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height: 100px;
+}
