@@ -10,7 +10,7 @@ if(isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password']
     $password_retype = htmlspecialchars($_POST['password_retype']);
 
     $check = $pdo -> prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = :email');
-    $check -> execute(['email'=> $email ]);
+    $check -> execute(['email'=> $email ]); // tableau associatif =>
     $data = $check->fetch();
     $row = $check->rowCount(); // compter string 
 

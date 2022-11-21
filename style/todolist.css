@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Cloud";
-    src: url('./fonts/Cloud.ttf') format('truetype');
+    src: url('/fonts/Cloud.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "cloud mix";
-    src: url('./fonts/Clouds\ Mix.ttf') format('truetype');
+    src: url('../fonts/Clouds\ Mix.ttf') format('truetype');
 }
 
 @font-face {
@@ -21,6 +21,7 @@
     padding: 0;
 }
 
+
 /* background */
 
 .background-video {
@@ -35,7 +36,6 @@
 
 
 /*effect to do list defilement */
-
 
 .defilement {
     overflow: hidden;
@@ -55,13 +55,11 @@
 }
 
 @keyframes defilement-rtl {
-
     /* rtl pour de droite à gauche un peu comme la radio kekw */
     0% {
         -webkit-transform: translate(0);
         transform: translate(0);
     }
-
     100% {
         -webkit-transform: translate(-100%);
         transform: translate(-100%);
@@ -69,9 +67,7 @@
 }
 
 
-
 /* barre de tâche*/
-
 
 .container {
     height: 150px;
@@ -112,7 +108,6 @@
     background: #9CCCFF;
     border-radius: 10px;
     color: rgb(250, 250, 250);
-
 }
 
 #addBtn {
@@ -135,10 +130,10 @@
 }
 
 
-
 /*grid + items*/
-/*nouvelle carte de tâche*/
 
+
+/*nouvelle carte de tâche*/
 
 #noteGrid {
     display: grid;
@@ -209,7 +204,6 @@
     border-bottom: 1px solid;
 }
 
-
 #modifBtn {
     border-radius: 10px;
     border: none;
@@ -274,7 +268,8 @@
     border-bottom: 1px solid;
 }
 
-.theme-name,a{
+.theme-name,
+a {
     color: white;
     text-decoration: none;
     font-size: 20px;
