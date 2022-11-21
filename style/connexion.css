@@ -99,6 +99,35 @@
 }
 
 
+/* email */
+
+.email {
+    margin-top: 10%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.email-input {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    outline: 0;
+    font-size: 1.4rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+}
+
+.email-input:active {
+    border-bottom: 2px solid rgb(232, 0, 0);
+}
+
+.email-input:hover {
+    border-bottom: 2px solid rgb(232, 0, 0);
+}
+
+
 /*button*/
 
 .button {
@@ -107,4 +136,54 @@
     margin-top: 10%;
     margin-bottom: 10%;
     height: 100px;
+}
+
+
+/*   lien inscription  */
+
+.link {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.link,
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+/* alert message */
+
+
+/* The alert message box */
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+/* The close button */
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* When moving the mouse over the close button */
+
+.closebtn:hover {
+    color: black;
 }
