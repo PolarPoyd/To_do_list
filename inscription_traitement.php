@@ -22,21 +22,26 @@ if(isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password']
             {
                 if(filter_var($email, FILTER_VALIDATE_EMAIL))
                 {
-                    if($password == $password_retype)
+                    if($password === $password_retype)
                     {
-                        $password = hash('sha256', $password);
-                        $ip = $_SERVER['REMOTE_ADDR'];
-
-                        $stmt = $pdo->prepare('INSERT INTO utilisateurs (pseudo, email, password) VALUES(:pseudo, :email, :password)');
+                        $stmt = $pdo->prepare('INSERT INTO utilisateurs values (null, :pseudo, :email, :password)');
                         $stmt -> execute([
-                            'pseudo' => $pseudo,
-                            'email' => $email,
-                            'password' => $password
+                            ':pseudo' => $pseudo,
+                            ':email' => $email,
+                            ':password' => password_hash($password, PASSWORD_ARGON2I)
+
                         ]);
+
+                        // $req = $pdo -> prepare("INSERT into task values (null, :task, :id_pseudo)");
+                        // $req -> execute(
+                        //     [
+                        //     'task'=>"",
+                        //     'id_pseudo'=> $pseudo
+                        // ]);
                         header('Location:connexion.php?reg_err=success');
                     }else header('Location:inscription.php?reg_err=password');
 
-                }else header('Location:inscription.php?reg_err=emai');
+                }else header('Location:inscription.php?reg_err=email');
 
             }else header('Location:inscription.php?reg_err=email_length');
 

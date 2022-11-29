@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Cloud";
-    src: url('/fonts/Cloud.ttf') format('truetype');
+    src: url('../fonts/Cloud.ttf') format('truetype');
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "incloud";
-    src: url('./fonts/Incloud.ttf');
+    src: url('../fonts/Incloud.ttf');
 }
 
 
@@ -40,7 +40,7 @@
 .defilement {
     overflow: hidden;
     width: 100%;
-    font-family: Cloud;
+    font-family: "Cloud";
     color: #c9e4fd;
     font-size: 6rem;
 }
@@ -270,9 +270,20 @@
 
 .theme-name,
 a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 20px;
     text-align: center;
     font-family: "incloud";
+}
+
+
+/* deco */
+
+.cacher {
+    display: none;
+}
+
+.pas-cacher {
+    display: block;
 }

@@ -13,7 +13,7 @@
 
 if(isset($_GET['login_err']))
 {
-        $err = htmlspecialchars($_GET['longin_err']);
+        $err = htmlspecialchars($_GET['login_err']);
 
         switch($err)
         {
@@ -105,6 +105,3 @@ if(isset($_GET['login_err']))
 </html> 
 
 
-<?php
-var_dump("yo");
-?>
