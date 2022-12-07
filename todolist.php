@@ -34,7 +34,7 @@ session_start();
             <label for="newTask"></label>
             <input type="text" name="newTask" class="addTask" id="newTask" placeholder="Add task..">
             <button type="submit" id="addBtn" name="addBtn">=</button>
-            <button id="theme"><a href="#"><span class="theme-name">dark</span></a></button>
+            <!-- <button id="theme"><a href="#"><span class="theme-name">dark</span></a></button> -->
             <div class="a"><a href="deconnexion.php" style="color: black">Log out</a></div>
 
 
@@ -56,27 +56,28 @@ session_start();
             
             <div class='noteCard'id='noteCard' name='noteCard'>
             <form action='update.php' method='post'>
-
+            
             <div class='text'>
             <p class='pas-cacher' id='pTask_{$task['id_task']}'>{$task['task']}</p>
             <input class='cacher' type='text' name='modifBtn' value='{$task['task']}' id='modif_{$task['id_task']}'>
             <input type='hidden' name='modifBtnValue' value='{$task['id_task']}'>
-
+            
+            <div class='buttons'>
+            
+                 <button class='modifBtn pas-cacher' id='modifBtn_{$task['id_task']}' style='border-radius: 10px;border: none;cursor: pointer; font-family: cloud mix;font-size: 35px;color: white;background-color: #9CCCFF; :hover: color: #9CCCFF;
+                 background-color: white;'> K </button>
+                 <button class='cacher' type='submit' id='validBtn_{$task['id_task']}'>valider</button>
+                 </form>
+ 
+                 <form action='delete.php' method='post' style='display: flex;flex-direction: column;'>
+                 <input type='hidden' name='deleteBtn' value='{$task['id_task']}'>
+                 <button type='submit' id='deleteBtn'> E </button>
+                </form>
+        </div>
 
            
             </div>
 
-           <div class='buttons'>
-
-                <button class='modifBtn pas-cacher' id='modifBtn_{$task['id_task']}'> K </button>
-                <button class='cacher' type='submit' id='validBtn_{$task['id_task']}'>valider</button>
-                </form>
-
-                <form action='delete.php' method='post'>
-                <input type='hidden' name='deleteBtn' value='{$task['id_task']}'>
-                <button type='submit' id='deleteBtn'> E </button>
-               </form>
-       </div>
 
         </div>
         ";
@@ -90,6 +91,24 @@ session_start();
                         amet consectetur adipisicing elit.</p>
                         <p class='noteText'>$task[task]</p> 
                 </div>
+
+<form action="delete.php" method="post" style="display: flex;flex-direction: column;">
+                 <input type="hidden" name="deleteBtn" value="54">
+                 <button type="submit" id="deleteBtn"> E </button>
+                </form>
+
+                <form action="delete.php" method="post" style="display: flex;flex-direction: column;">
+                 <input type="hidden" name="deleteBtn" value="54">
+                 <button type="submit" id="deleteBtn"> E </button>
+                </form>
+
+
+
+
+
+
+<button class="modifBtn pas-cacher" id="modifBtn_58" style="border-radius: 10px;border: none;cursor: pointer;font-family: &quot;cloud mix&quot;;font-size: 35px;color: white;background-color: #9CCCFF;"> K </button>
+
 
                 <div class="buttons">
 

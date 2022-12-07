@@ -204,7 +204,7 @@
     border-bottom: 1px solid;
 }
 
-#modifBtn {
+.buttons button {
     border-radius: 10px;
     border: none;
     cursor: pointer;
